@@ -16,17 +16,13 @@
 
     <title>Vite App</title>
   </head>
-  <body>
+  <body class="font-roboto">
     <div class="container mx-auto">
-      <header
-        class="flex justify-between items-center px-4 py-4 bg-white shadow-md"
-      >
-        <!-- Logo -->
+      <header class="flex justify-between items-center px-4 py-4 bg-white shadow-md">
         <div class="logo">
           <img src="image/image 3.png" alt="Phương Đông" class="h-12" />
         </div>
-
-        <!-- Navigation -->
+    
         <nav class="hidden md:flex space-x-6 text-gray-700">
           <a href="#" class="hover:text-blue-500 font-bold">Ưu đãi</a>
           <a href="#" class="hover:text-blue-500 font-bold">Dịch vụ</a>
@@ -36,24 +32,18 @@
           <a href="#" class="hover:text-blue-500 font-bold">Thư viện</a>
           <a href="#" class="hover:text-blue-500 font-bold">Liên hệ</a>
         </nav>
-
-        <!-- Hotline -->
+    
         <div class="hidden md:flex items-center">
           <a
             href="tel:19001806"
             class="text-white bg-gradient-to-b from-[#FFB469] to-[#E57709] px-4 py-2 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 hover:brightness-110 hover:scale-105"
           >
-            <img
-              src="image/Phone, Call.png"
-              alt="Phone Icon"
-              class="w-5 h-5"
-            />
+            <img src="image/Phone, Call.png" alt="Phone Icon" class="w-5 h-5" />
             Hotline: 1900 1806
           </a>
         </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
+    
+        <div class="menu-button md:hidden flex justify-self items-center">
           <button id="menu-toggle" class="text-gray-700 focus:outline-none">
             <svg id="menu-icon" class="h-6 w-6" viewBox="0 0 24 24">
               <path
@@ -64,29 +54,51 @@
           </button>
         </div>
       </header>
-
-      <!-- Mobile Navigation -->
+    
       <div
-      id="mobile-menu"
-      class="fixed top-0 right-0 w-3/4 h-full bg-gray-100 p-6 shadow-lg transform translate-x-full transition-transform duration-300 z-50"
-    >
-      <nav>
-        <ul class="space-y-4 text-left">
-          <li><a href="#" class="block py-2 px-4 font-bold text-xl">Ưu đãi</a></li>
-          <li><a href="#" class="block py-2 px-4 font-bold text-xl">Dịch vụ</a></li>
-          <li><a href="#" class="block py-2 px-4 font-bold text-xl">Giới thiệu</a></li>
-          <li><a href="#" class="block py-2 px-4 font-bold text-xl">Đội ngũ bác sĩ</a></li>
-          <li><a href="#" class="block py-2 px-4 font-bold text-xl">Bảng giá</a></li>
-          <li><a href="#" class="block py-2 px-4 font-bold text-xl">Thư viện</a></li>
-          <li><a href="#" class="block py-2 px-4 font-bold text-xl">Liên hệ</a></li>
-        </ul>
-      </nav>
-    </div>
+        id="mobile-menu"
+        class="fixed top-0 right-0 w-full sm:w-1/2 md:w-1/2 h-full bg-gray-100 p-6 shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+        <div class="flex justify-end">
+          <button id="close-menu" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" viewBox="0 0 24 24">
+              <path
+                fill-rule="evenodd"
+                d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.829-4.828 4.829a1 1 0 0 1-1.414-1.414l4.829-4.828-4.828-4.829a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.829 4.828z"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav>
+          <ul class="space-y-4 text-left">
+            <li>
+              <a href="#" class="block py-2 px-4 font-bold text-xl">Ưu đãi</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-4 font-bold text-xl">Dịch vụ</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-4 font-bold text-xl">Giới thiệu</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-4 font-bold text-xl">Đội ngũ bác sĩ</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-4 font-bold text-xl">Bảng giá</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-4 font-bold text-xl">Thư viện</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-4 font-bold text-xl">Liên hệ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <!-- Banner Toàn Màn Hình -->
     <section class="w-full relative">
       <!-- Swiper -->
-      <div class="swiper mySwiper">
+      <div class="swiper mySwiper1">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img
@@ -146,16 +158,42 @@
           </div>
         </div>
 
-        <!-- Slider Section -->
         <div class="col-span-2 overflow-hidden relative w-full">
-          <div id="sliderWrapper" class="w-full overflow-x-auto scrollbar-hide">
-            <div
-              id="slider"
-              class="flex transition-transform duration-300 gap-5"
-            >
-              <!-- Slide Items -->
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide relative min-w-[280px] md:min-w-[328px] h-[442px] rounded-lg shadow-lg group text-center md:w-1/2 md:mt-0">
+                <img
+                  src="image/Rectangle 6447.png"
+                  class="w-full rounded-t-lg"
+                  alt="Ưu đãi"
+                />
+                <div
+                  class="p-4 absolute h-[242px] bottom-0 left-0 w-full bg-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#2DBEFC] group-hover:to-[#50C577] rounded-tl-3xl rounded-tr-3xl rounded-br-3xl"
+                >
+                  <h3
+                    class="py-4 text-2xl bg-gradient-to-r from-[#26BA5F] via-[#26BA5F] to-[#08B2FB] bg-clip-text text-transparent font-arima font-bold transition-all duration-300 group-hover:bg-none group-hover:text-white"
+                  >
+                    Ưu đãi 50%
+                  </h3>
+                  <p
+                    class="text-1xl font-bold text-gray-600 transition-all duration-300 group-hover:text-white"
+                  >
+                    Gói khám thai tổng quát
+                  </p>
+                  <p
+                    class="text-xs text-gray-500 mt-2 transition-all duration-300 group-hover:text-white"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <button
+                    class="mt-6 w-full border border-orange-500 bg-white text-orange-500 py-2 rounded-full shadow-lg transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-xl hover:scale-105 hover:rounded-2xl"
+                  >
+                    Đăng ký nhận ưu đãi
+                  </button>
+                </div>
+              </div>
               <div
-                class="slide relative min-w-[280px] md:min-w-[328px] h-[442px] rounded-lg shadow-lg group text-center md:w-1/2 mt-4 md:mt-0"
+                class="swiper-slide slide relative min-w-[280px] md:min-w-[328px] h-[442px] rounded-lg shadow-lg group text-center"
               >
                 <img
                   src="image/Rectangle 6447.png"
@@ -188,7 +226,7 @@
                 </div>
               </div>
               <div
-                class="slide relative min-w-[280px] md:min-w-[328px] h-[442px] rounded-lg shadow-lg group text-center"
+                class="swiper-slide slide relative min-w-[280px] md:min-w-[328px] h-[442px] rounded-lg shadow-lg group text-center"
               >
                 <img
                   src="image/Rectangle 6447.png"
@@ -221,7 +259,7 @@
                 </div>
               </div>
               <div
-                class="slide relative min-w-[280px] md:min-w-[328px] h-[442px] rounded-lg shadow-lg group text-center"
+                class="swiper-slide slide relative min-w-[280px] md:min-w-[328px] h-[442px] rounded-lg shadow-lg group text-center"
               >
                 <img
                   src="image/Rectangle 6447.png"
@@ -254,7 +292,7 @@
                 </div>
               </div>
               <div
-                class="slide relative min-w-[280px] md:min-w-[328px] h-[442px] rounded-lg shadow-lg group text-center"
+                class="swiper-slide slide relative min-w-[280px] md:min-w-[328px] h-[442px] rounded-lg shadow-lg group text-center"
               >
                 <img
                   src="image/Rectangle 6447.png"
@@ -286,41 +324,6 @@
                   </button>
                 </div>
               </div>
-              <div
-                class="slide relative min-w-[280px] md:min-w-[328px] h-[442px] rounded-lg shadow-lg group text-center"
-              >
-                <img
-                  src="image/Rectangle 6447.png"
-                  class="w-full rounded-t-lg"
-                  alt="Ưu đãi"
-                />
-                <div
-                  class="p-4 absolute h-[242px] bottom-0 left-0 w-full bg-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#2DBEFC] group-hover:to-[#50C577] rounded-tl-3xl rounded-tr-3xl rounded-br-3xl"
-                >
-                  <h3
-                    class="py-4 text-2xl bg-gradient-to-r from-[#26BA5F] via-[#26BA5F] to-[#08B2FB] bg-clip-text text-transparent font-arima font-bold transition-all duration-300 group-hover:bg-none group-hover:text-white"
-                  >
-                    Ưu đãi 50%
-                  </h3>
-                  <p
-                    class="text-1xl font-bold text-gray-600 transition-all duration-300 group-hover:text-white"
-                  >
-                    Gói khám thai tổng quát
-                  </p>
-                  <p
-                    class="text-xs text-gray-500 mt-2 transition-all duration-300 group-hover:text-white"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                  <button
-                    class="mt-6 w-full border border-orange-500 bg-white text-orange-500 py-2 rounded-full shadow-lg transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-xl hover:scale-105 hover:rounded-2xl"
-                  >
-                    Đăng ký nhận ưu đãi
-                  </button>
-                </div>
-              </div>
-
-              <!-- Thêm các slide khác tương tự -->
             </div>
           </div>
         </div>
@@ -503,11 +506,7 @@
           class="max-w-full flex flex-col md:flex-row justify-evenly items-center h-20 md:h-10 bg-gradient-to-r from-[#50C577] to-[#2DBEFC] rounded-b-2xl px-4 mt-4"
         >
           <div class="flex items-center space-x-2 text-white">
-            <img
-              src="image/Phone, Call.png"
-              alt="Phone Icon"
-              class="w-5 h-5"
-            />
+            <img src="image/Phone, Call.png" alt="Phone Icon" class="w-5 h-5" />
             <p>Hotline: 1900 1806</p>
           </div>
           <a
@@ -549,19 +548,17 @@
             rhoncus. Ornare et dui sit massa.
           </p>
           <button
-  class="mt-4 bg-gradient-to-b from-[#FFB469] to-[#E57709] text-white px-4 py-2 rounded-full shadow-md transition-all duration-300 hover:brightness-110 hover:scale-105 hover:shadow-lg"
-  onclick="alert('Bạn đã đăng ký thành công!')"
->
-  Đăng ký tư vấn
-</button>
-
+            class="mt-4 bg-gradient-to-b from-[#FFB469] to-[#E57709] text-white px-4 py-2 rounded-full shadow-md transition-all duration-300 hover:brightness-110 hover:scale-105 hover:shadow-lg"
+            onclick="alert('Bạn đã đăng ký thành công!')"
+          >
+            Đăng ký tư vấn
+          </button>
         </div>
       </div>
     </section>
 
     <section>
       <div class="container mx-auto">
-        <!-- Tiêu đề và nút điều hướng -->
         <div
           class="flex flex-col md:flex-row items-center justify-between text-center md:text-left"
         >
@@ -584,52 +581,50 @@
           </div>
         </div>
 
-        <!-- Carousel -->
-        <div
-          id="slideImageContainer"
-          class="relative mt-4 overflow-x-auto scroll-smooth snap-x flex gap-4 scrollbar-hide"
-        >
-          <div class="snap-center">
-            <img
-              src="image/Rectangle 6455.png"
-              class="rounded-lg max-w-[180px] md:max-w-[235px] h-[300px] md:h-[390px] object-cover"
-              alt="Image 1"
-            />
-          </div>
-          <div class="snap-center">
-            <img
-              src="image/Rectangle 6456.png"
-              class="rounded-3xl max-w-[180px] md:max-w-[235px] h-[300px] md:h-[390px] object-cover"
-              alt="Image 2"
-            />
-          </div>
-          <div class="snap-center">
-            <img
-              src="image/Rectangle 6457.png"
-              class="rounded-3xl max-w-[180px] md:max-w-[235px] h-[300px] md:h-[390px] object-cover"
-              alt="Image 3"
-            />
-          </div>
-          <div class="snap-center">
-            <img
-              src="image/Rectangle 6459.png"
-              class="rounded-3xl max-w-[180px] md:max-w-[235px] h-[300px] md:h-[390px] object-cover"
-              alt="Image 4"
-            />
-          </div>
-          <div class="snap-center">
-            <img
-              src="image/Rectangle 6460.png"
-              class="rounded-3xl max-w-[180px] md:max-w-[235px] h-[300px] md:h-[390px] object-cover"
-              alt="Image 5"
-            />
-          </div>
-          <div class="snap-center">
-            <img
-              src="image/Rectangle 6462.png"
-              class="rounded-3xl max-w-[180px] md:max-w-[235px] h-[300px] md:h-[390px] object-cover"
-              alt="Image 6"
-            />
+        <div class="swiper mySwiper3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="image/Rectangle 6455.png"
+                class="rounded-3xl w-full max-w-[180px] sm:max-w-[235px] h-[300px] object-cover"
+                alt="Image 1"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="image/Rectangle 6456.png"
+                class="rounded-3xl w-full max-w-[180px] sm:max-w-[235px] h-[300px] object-cover"
+                alt="Image 2"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="image/Rectangle 6457.png"
+                class="rounded-3xl w-full max-w-[180px] sm:max-w-[235px] h-[300px] object-cover"
+                alt="Image 3"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="image/Rectangle 6459.png"
+                class="rounded-3xl w-full max-w-[180px] sm:max-w-[235px] h-[300px] object-cover"
+                alt="Image 4"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="image/Rectangle 6460.png"
+                class="rounded-3xl w-full max-w-[180px] sm:max-w-[235px] h-[300px] object-cover"
+                alt="Image 5"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="image/Rectangle 6462.png"
+                class="rounded-3xl w-full max-w-[180px] sm:max-w-[235px] h-[300px] object-cover"
+                alt="Image 6"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -645,10 +640,11 @@
           >
             Đội ngũ bác sĩ bệnh viện đa khoa Phương Đông
           </h2>
-          <a href="https://benhvienphuongdong.vn/doi-ngu-bac-si/"
-            class="bg-gradient-to-b from-[#FFB469] to-[#E57709] text-white px-4 py-2 rounded-full transition-all duration-300 hover:brightness-110 hover:scale-105 hover:shadow-lg"
+          <a
+            href="https://benhvienphuongdong.vn/doi-ngu-bac-si/"
+            class="bg-gradient-to-b from-[#FFB469] to-[#E57709] text-white px-4 py-2 flex items-center rounded-full transition-all duration-300 hover:brightness-110 hover:scale-105 hover:shadow-lg"
           >
-            Tìm bác sĩ
+          <img src="/image/single-user-search_1.png" alt=""  />Tìm bác sĩ
           </a>
         </div>
 
@@ -848,11 +844,7 @@
             href="tel:19001806"
             class="text-white bg-gradient-to-b from-[#FFB469] to-[#E57709] w-32 px-2 py-2 mt-8 rounded-full font-semibold flex items-center justify-center gap-1 transition-all duration-300 hover:brightness-110 hover:scale-105"
           >
-            <img
-              src="image/Phone, Call.png"
-              alt="Phone Icon"
-              class="w-4 h-4"
-            />
+            <img src="image/Phone, Call.png" alt="Phone Icon" class="w-4 h-4" />
             Liên hệ ngay
           </a>
         </div>
@@ -907,11 +899,7 @@
             href="tel:19001806"
             class="text-white bg-gradient-to-b from-[#FFB469] to-[#E57709] w-32 px-2 py-2 mt-8 rounded-full font-semibold flex items-center justify-center gap-1 transition-all duration-300 hover:brightness-110 hover:scale-105"
           >
-            <img
-              src="image/Phone, Call.png"
-              alt="Phone Icon"
-              class="w-4 h-4"
-            />
+            <img src="image/Phone, Call.png" alt="Phone Icon" class="w-4 h-4" />
             Liên hệ ngay
           </a>
         </div>
@@ -989,9 +977,9 @@
     </section>
 
     <footer
-      class="relative bg-gradient-to-r from-green-400 to-blue-500 text-white clip-footer p-6"
+      class="relative bg-gradient-to-r from-green-400 to-blue-500 text-white clip-footer p-6 "
     >
-      <div class="container mx-auto">
+      <div class="container mx-auto h-auto">  
         <div
           class="px-6 grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10 pt-20"
         >
@@ -1066,20 +1054,27 @@
 
     <style>
       .clip-footer {
-        clip-path: ellipse(100% 80% at 50% 90%);
+        clip-path: ellipse(100% 90% at 50% 90%);
       }
-      .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-      }
+      @media (max-width: 1024px) {
+  .menu-button {
+    display: block;
+  }
+
+  .md\:flex { /* Ẩn menu desktop trên màn hình nhỏ */
+    display: none;
+  }
+}
     </style>
     <script>
       // banner
       document.addEventListener("DOMContentLoaded", function () {
-        var swiper = new Swiper(".mySwiper", {
-          loop: true, // Lặp vô hạn
+        // Instance Swiper thứ nhất (slide tự động, lặp vô hạn)
+        var swiper1 = new Swiper(".mySwiper1", {
+          loop: true,
           autoplay: {
-            delay: 3000, // 3 giây tự động chuyển slide
-            disableOnInteraction: false, // Không dừng khi user tương tác
+            delay: 3000,
+            disableOnInteraction: false,
           },
           navigation: {
             nextEl: ".swiper-button-next",
@@ -1089,170 +1084,74 @@
             el: ".swiper-pagination",
             clickable: true,
           },
-          grabCursor: true, // Hiển thị icon bàn tay khi rê chuột
-          slidesPerView: 1, // Hiển thị 1 slide/lần
-          spaceBetween: 10, // Khoảng cách giữa các slide
-          effect: "slide", // Hiệu ứng slide thông thường
-        });
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const slider = document.getElementById("slider");
-        const prevBtn = document.getElementById("prevBtn");
-        const nextBtn = document.getElementById("nextBtn");
-
-        let currentIndex = 0;
-        const slideWidth = 250 + 16; // Card width + margin-right
-        const totalSlides = document.querySelectorAll(".slide").length;
-
-        let isDragging = false;
-        let startPos = 0;
-        let currentTranslate = 0;
-        let prevTranslate = 0;
-        let animationID;
-        let startTime;
-        let isTouchDevice = "ontouchstart" in window;
-
-        prevBtn.addEventListener("click", function () {
-          moveSlide(-1);
+          grabCursor: true,
+          slidesPerView: 1,
+          spaceBetween: 10,
+          effect: "slide",
         });
 
-        nextBtn.addEventListener("click", function () {
-          moveSlide(1);
+        // Instance Swiper thứ hai (hiển thị 3 slide)
+        var swiper2 = new Swiper(".mySwiper2", {
+          loop: true,
+          slidesPerView: 3,
+          spaceBetween: 30,
+          navigation: {
+            nextEl: "#nextBtn",
+            prevEl: "#prevBtn",
+          },
         });
-
-        function moveSlide(direction) {
-          currentIndex += direction;
-          if (currentIndex < 0) {
-            currentIndex = totalSlides - 1;
-          } else if (currentIndex >= totalSlides) {
-            currentIndex = 0;
-          }
-          updateSlider();
-        }
-
-        function updateSlider() {
-          slider.style.transition = "transform 0.3s ease-in-out";
-          slider.style.transform = `translateX(-${
-            currentIndex * slideWidth
-          }px)`;
-        }
-
-        // Dragging event handlers
-        function startDrag(e) {
-          isDragging = true;
-          startPos = getPositionX(e);
-          prevTranslate = currentIndex * -slideWidth;
-          slider.style.transition = "none"; // Tắt animation khi kéo
-          startTime = new Date().getTime();
-          animationID = requestAnimationFrame(animation);
-        }
-
-        function drag(e) {
-          if (!isDragging) return;
-          const currentPosition = getPositionX(e);
-          const diff = currentPosition - startPos;
-          currentTranslate = prevTranslate + diff;
-          slider.style.transform = `translateX(${currentTranslate}px)`;
-        }
-
-        function endDrag() {
-          if (!isDragging) return;
-          isDragging = false;
-          cancelAnimationFrame(animationID);
-
-          const moveBy = currentTranslate - prevTranslate;
-          const timeDiff = new Date().getTime() - startTime;
-
-          if (Math.abs(moveBy) > 50 || timeDiff < 200) {
-            if (moveBy < 0 && currentIndex < totalSlides - 1) {
-              currentIndex++;
-            } else if (moveBy > 0 && currentIndex > 0) {
-              currentIndex--;
-            }
-          }
-
-          updateSlider();
-        }
-
-        function getPositionX(e) {
-          return isTouchDevice ? e.touches[0].clientX : e.clientX;
-        }
-
-        function animation() {
-          if (isDragging) {
-            requestAnimationFrame(animation);
-          }
-        }
-
-        // Mouse events
-        slider.addEventListener("mousedown", startDrag);
-        slider.addEventListener("mousemove", drag);
-        slider.addEventListener("mouseup", endDrag);
-        slider.addEventListener("mouseleave", endDrag);
-
-        // Touch events
-        slider.addEventListener("touchstart", startDrag);
-        slider.addEventListener("touchmove", drag);
-        slider.addEventListener("touchend", endDrag);
       });
 
       // res menu
       document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const menuIcon = document.getElementById("menu-icon");
-    const mobileMenu = document.getElementById("mobile-menu");
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeMenu = document.getElementById("close-menu"); // Thêm nút đóng
 
-    let isMenuOpen = false;
+  menuToggle.addEventListener("click", function () {
+    mobileMenu.classList.toggle("translate-x-full");
 
-    menuToggle.addEventListener("click", function () {
-        if (isMenuOpen) {
-            mobileMenu.classList.add("translate-x-full");
-            menuIcon.innerHTML = `<path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2z"/>`; // Quay về icon menu
-        } else {
-            mobileMenu.classList.remove("translate-x-full");
-            menuIcon.innerHTML = `<path fill-rule="evenodd" d="M6 18L18 6M6 6l12 12"/>`; // Đổi sang icon đóng (dấu X)
-        }
-        isMenuOpen = !isMenuOpen;
-    });
+    if (mobileMenu.classList.contains("translate-x-full")) {
+      menuIcon.innerHTML = `
+        <path
+          fill-rule="evenodd"
+          d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2z"
+        />
+      `;
+    } else {
+      menuIcon.innerHTML = `
+        <path
+          fill-rule="evenodd"
+          d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.829-4.828 4.829a1 1 0 0 1-1.414-1.414l4.829-4.828-4.828-4.829a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.829 4.828z"
+        />
+      `;
+    }
+  });
 
-    // Ẩn menu khi nhấn ra ngoài
-    document.addEventListener("click", function (event) {
-        if (isMenuOpen && !mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-            mobileMenu.classList.add("translate-x-full");
-            menuIcon.innerHTML = `<path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2z"/>`; // Quay về icon menu
-            isMenuOpen = false;
-        }
-    });
+  closeMenu.addEventListener("click", function () { // Thêm sự kiện click cho nút đóng
+    mobileMenu.classList.add("translate-x-full");
+    menuIcon.innerHTML = `
+      <path
+        fill-rule="evenodd"
+        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2z"
+      />
+    `;
+  });
 });
 
-
       // slide 2
-      const slideImageContainer = document.getElementById(
-        "slideImageContainer"
-      );
-      const slidePrevBtn = document.getElementById("slidePrevBtn");
-      const slideNextBtn = document.getElementById("slideNextBtn");
-      const slideImages = document.querySelectorAll(
-        "#slideImageContainer > div"
-      );
-      let currentSlideIndex = 0;
-
-      slideNextBtn.addEventListener("click", () => {
-        currentSlideIndex = (currentSlideIndex + 1) % slideImages.length;
-        updateSlideDisplay();
+      document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".mySwiper3", {
+          loop: true,
+          slidesPerView: 5,
+          spaceBetween: 16, // Khoảng cách giữa các slide
+          navigation: {
+            nextEl: "#slideNextBtn",
+            prevEl: "#slidePrevBtn",
+          },
+        });
       });
-
-      slidePrevBtn.addEventListener("click", () => {
-        currentSlideIndex =
-          (currentSlideIndex - 1 + slideImages.length) % slideImages.length;
-        updateSlideDisplay();
-      });
-
-      function updateSlideDisplay() {
-        const translateX = -currentSlideIndex * slideImages[0].offsetWidth;
-        slideImageContainer.style.transform = `translateX(${translateX}px)`;
-      }
     </script>
   </body>
 </html>
